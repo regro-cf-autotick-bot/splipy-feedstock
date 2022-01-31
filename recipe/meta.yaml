@@ -1,5 +1,5 @@
 {% set name = "splipy" %}
-{% set version = "1.5.6" %}
+{% set version = "1.5.7" %}
 
 
 package:
@@ -8,14 +8,12 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Splipy-{{ version }}.tar.gz
-    sha256: 6b204494fc7b4cc5c70d4ffa5db1cf20fd5326e23aa6493c743912b148b5ca22
-  - path: PyPI_text.md
-    sha256: 0afcf4046cb2c1826bf574390bb4933a381e47b350d00dd6b60671f708e7ce77
+    sha256: 400931df9159adcc88e07731c256f1af9f8f4c96babb9a058e6dbad04afdda39
   - path: COPYING
     sha256: 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986
-  
+
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
