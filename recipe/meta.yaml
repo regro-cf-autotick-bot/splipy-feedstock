@@ -27,7 +27,7 @@ requirements:
     - pip
     - python
   run:
-    - numpy <1.20,>=1.15
+    - numpy >=1.15
     - python
     - scipy >=1.2
 
