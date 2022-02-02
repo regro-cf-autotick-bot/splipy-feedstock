@@ -23,11 +23,11 @@ requirements:
     - {{ compiler('c') }}
   host:
     - cython
-    - numpy
+    - numpy >=1.15.0
     - pip
     - python
   run:
-    - numpy >=1.15
+    - {{ pin_compatible('numpy') }}
     - python
     - scipy >=1.2
 
