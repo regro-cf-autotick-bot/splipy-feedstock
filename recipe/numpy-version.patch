@@ -1,0 +1,11 @@
+--- setup.py-orig	2022-02-02 14:12:40.348136871 -0600
++++ setup.py	2022-02-02 14:13:06.819513586 -0600
+@@ -23,7 +23,7 @@
+         'splipy': ['templates/*.bpt'],
+     },
+     install_requires=[
+-        'numpy    >= 1.15, < 1.20',
++        'numpy    >= 1.15',
+         'scipy    >= 1.2',
+     ],
+     extras_require={
