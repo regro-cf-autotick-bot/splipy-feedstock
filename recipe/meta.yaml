@@ -1,5 +1,5 @@
 {% set name = "splipy" %}
-{% set version = "1.5.7" %}
+{% set version = "1.5.8" %}
 
 
 package:
@@ -8,14 +8,12 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Splipy-{{ version }}.tar.gz
-    sha256: 400931df9159adcc88e07731c256f1af9f8f4c96babb9a058e6dbad04afdda39
-    patches:
-      - numpy-version.patch
+    sha256: 09d4a3b173ec883c7309625ebdff4ece9721fc80c0efd2bd70f069ecb73ac76a
   - path: COPYING
     sha256: 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -23,7 +21,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - cython
-    - numpy >=1.15.0
+    - numpy >=1.20
     - pip
     - python
   run:
