@@ -13,19 +13,19 @@ source:
     sha256: 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cython
     - numpy >=1.20
     - pip
     - python
   run:
-    - {{ pin_compatible('numpy') }}
     - python
     - scipy >=1.2
 
